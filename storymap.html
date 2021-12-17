@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <title>Healthfacilities map</title>
+</head>
+<body>
+    <style>
+        #map{
+            height: 650px;
+            width: 950px;
+        }
+    </style>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([-1.09626573,37.01288458], 13);
+        var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(map);
+    var health_facility = [{
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 39.6989844,-3.997773 ]
+        },
+        "properties": {
+            "name":"\tChaliana Medical Centre",
+            "organisationUnits/id":"pP1WlCSYejH"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 37.26185,-1.5195 ]
+        },
+        "properties": {
+            "name":"   Machakos Dice",
+            "organisationUnits/id":"qAmRvjY8kVd"}
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 37.35626,-0.6854 ]
+        },
+        "properties": {
+            "name":" CFW Mwea Clinic",
+            "organisationUnits/id":"DrRI1gAgp5i"
+        }
+    }, {
+        "type": "Feature",
+         "geometry": {
+             "type": "Point",
+             "coordinates":  [ 34.449226,-0.53344 ]
+            },
+            "properties": {
+                "name":" Dr. Elly Ochola Memorial Hospital",
+                "organisationUnits/id":"Dyo0QYSfPUQ"
+            }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 39.557671,2.424331 ]
+        },
+        "properties": {
+            "name":" Eldas nomadic clinic",
+            "organisationUnits/id":"mA5X0hfEgzA"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 35.479175,-0.255157 ]
+        },
+        "properties": {
+            "name":" Fig Tree Health Options Kericho Limited Chepseon",
+            "organisationUnits/id":"O6hDdHQsQEB"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 36.0441033,-0.2839867 ]
+        },
+        "properties": {
+            "name":" Nakuru West( A.I.P.C.A) Medical Centre",
+            "organisationUnits/id":"ZLWW4U0YIOu"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 39.702085,-4.0033055 ]
+        },
+        "properties": {
+            "name":" Nyali Healthcare LTD Bamburi",
+            "organisationUnits/id":"xs2q0Tlmf5t"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 36.9122061,-1.2220735 ]
+        },
+        "properties": {
+            "name":" Radiant Group Of Hospitals Kasarani Sportsview",
+            "organisationUnits/id":"X2ibxFpkIcT"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 37.094,-0.00133164 ]
+        },
+        "properties": {
+            "name":"10 Engineer VCT",
+            "organisationUnits/id":"Vh676wb3d16"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 37.14413,-1.07354 ]
+        },
+        "properties": {
+            "name":"12 Engineers",
+            "organisationUnits/id":"gPEGZGkfDWa"
+        }
+    },  {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 36.14533,-0.29656 ]
+        },
+        "properties": {
+            "name":"3Kr Health Centre",
+            "organisationUnits/id":"CgMmkS9jWI6"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 36.78351,-1.33192 ]
+        },
+        "properties": {
+            "name":"7KR Mrs Health Centre",
+            "organisationUnits/id":"kMvyfZaFoq8"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates":  [ 36.84845,-1.64235 ]
+        },
+        "properties": {
+            "name":"8Th Street Clinic",
+            "organisationUnits/id":"sxSzjDL1zPB"            
+        }
+    }];
+       
+    //var geojson = L.geoJson(health_facility).addTo(map)
+
+    var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+
+L.geoJSON(health_facility, {
+    onEachFeature: onEachFeature,
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions);
+    }
+}).addTo(map);
+function onEachFeature(feature, layer) {
+		var popupContent = feature.properties.name +'<p>Health facility ';
+
+		if (feature.properties && feature.properties.popupContent) {
+			popupContent += feature.properties.popupContent;
+		}
+
+		layer.bindPopup(popupContent);
+	}
+
+
+
+
+    </script>
+</body>
+</html>

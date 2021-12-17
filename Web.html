@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <section>
+        <div id="main" class="main text-center ">
+            <header>
+                <h1 id="title">Kimotho David Muchiri</h1>
+                <h1 id="title">ENC222-0131/2018</h1>
+                <p class="title">Mapping out health facilities for Cancer medication</p>
+                </header>
+            <div id="img-div">
+                <figure>
+                <img id="image"  src="Profile.png" alt="image" class="responsive" style="width:100px;height:100px">
+                </figure>
+                <p id="img-caption">Kimotho David</p>
+            </div>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'problem')">Home</button>
+                <button class="tablinks" onclick="openTab(event, 'methodology')">Methodology</button>
+                <button class="tablinks" onclick="openTab(event, 'Results')">Results</button>
+            </div>
+            <!-- Tab content -->
+            <div id="problem" class="tabcontent">
+    <p>
+        <H4>Problem statement</H4>
+        Cancer is the second leading cause of death from non-communicable disease (or NCDs), and the number of cases is rising rapidly.<br>
+        The illness affects Kenyans of all ages and socio-economic backgrounds but has a disproportionate impact on the most vulnerable groups. 
+        Cervical cancer makes up the largest portion of cancer cases (nearly 12%) followed by breast cancer, Kaposi’s sarcoma, and oesophageal and prostate cancer.
+        In 2020, according to the World Health Organization’s International Agency for Research on Cancer (IARC), new cases of all types of cancers increased to nearly 
+        20 million worldwide, and there were 10 million cancer deaths (up from about 17 million and 9.5 million, respectively, in 2018). <br>
+        Current IARC projections suggest that one in 5 people worldwide will develop cancer during their lifetime and that the global
+        cancer burden is projected to rise by about 50% over the next 20 years.
+    </p>
+</div>
+  
+  <div id="methodology" class="tabcontent">
+    <h3>Methodology</h3>
+    <p> The growing cancer burden is driven by aging populations,
+        as well as several risk factors, such as sedentary lifestyles, obesity and smoking.
+        <br> in many low- and middle-income countries, most cancer cases in Kenya are diagnosed at an advanced stage, when treatment options 
+        are limited and families make huge sacrifices, often with poor results. Households not covered by health insurance frequently grasp 
+        for dire financial fixes – borrowing, selling assets – that can plunge them further into insolvency.
+        According to a 2018 household survey, 8% of all Kenyan households experienced catastrophic health expenditures, with out-of-pocket 
+        payments pushing more than 1 million Kenyans into poverty annually.<br>
+     </p>
+  </div>
+  
+  <div id="Results" class="tabcontent">
+    <h3>Results</h3>
+    <p>  With less than 20% of the population enrolled in the national 
+        health insurance scheme, financial barriers to accessing care remains problematic as many Kenyans only enroll once they become ill.
+        The Kenyan government has stepped up its response to the mounting threat of cancer , but much more needs to be done. Efforts are underway
+        to boost the capacity of health providers through in-service training on early cancer screening and 
+        expand pre-service training to increase the availability of specialized personnel.
+    </p>
+  </div>
+   
+    <q>A cancer facility map</q>
+
+    <blockquote> Cancer facilities</blockquote>
+    <footer>
+        <h4>About ME <u> <a id="tribute-link" href="About.html" target="_blank">About Me</a></u> </h4>
+    </footer>
+</div>
+</section>
+
+<script>
+    function openTab(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
+</body>
